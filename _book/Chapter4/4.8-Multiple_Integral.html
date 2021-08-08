@@ -1,0 +1,891 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.8 重积分 · Learn Advanced Mathematics with Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Johannes Liu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Chapter5/5.0-Linear_Algebra.html" />
+    
+    
+    <link rel="prev" href="4.7-Partial_Derivative.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"JohannesLiu","repo":"Knowledge-Extraction-Concept-and-Technology","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://flyinghuster.com" target="_blank" class="custom-link">Home Page</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/1.0-Prelimary.html">
+            
+                <a href="../Chapter1/1.0-Prelimary.html">
+            
+                    
+                    第一章：初步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1.1-Data_Science_Introduction.html">
+            
+                <a href="../Chapter1/1.1-Data_Science_Introduction.html">
+            
+                    
+                    1.1 数据结构概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1.2-Install Python Interpreter.html">
+            
+                <a href="../Chapter1/1.2-Install Python Interpreter.html">
+            
+                    
+                    1.2 安装Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1.3-Package_of_Python.html">
+            
+                <a href="../Chapter1/1.3-Package_of_Python.html">
+            
+                    
+                    1.3 Python类库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1.4-Anaconda.html">
+            
+                <a href="../Chapter1/1.4-Anaconda.html">
+            
+                    
+                    1.4 Anaconda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Chapter1/1.5-Jupyter.html">
+            
+                <a href="../Chapter1/1.5-Jupyter.html">
+            
+                    
+                    1.5 Jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Chapter1/1.6-Integrated_Development_Environment.html">
+            
+                <a href="../Chapter1/1.6-Integrated_Development_Environment.html">
+            
+                    
+                    1.6 集成开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/2.0-Prelimary_for_SymPy.html">
+            
+                <a href="../Chapter2/2.0-Prelimary_for_SymPy.html">
+            
+                    
+                    第二章：SymPy初步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2.1-Introduction_to_SymPy.html">
+            
+                <a href="../Chapter2/2.1-Introduction_to_SymPy.html">
+            
+                    
+                    2.1 初识SymPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2.2-Install_SymPy.html">
+            
+                <a href="../Chapter2/2.2-Install_SymPy.html">
+            
+                    
+                    2.2 安装SymPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2.3-Grammar_of_SymPy.html">
+            
+                <a href="../Chapter2/2.3-Grammar_of_SymPy.html">
+            
+                    
+                    2.3 SymPy语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/3.0-SymPy_Foundation.html">
+            
+                <a href="../Chapter3/3.0-SymPy_Foundation.html">
+            
+                    
+                    第三章：SymPy基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3.1-Basic_Manipulator.html">
+            
+                <a href="../Chapter3/3.1-Basic_Manipulator.html">
+            
+                    
+                    3.1 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3.                                            2-Print.md">
+            
+                <span>
+            
+                    
+                    3.2 打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Chapter3/3.3-Plot.html">
+            
+                <a href="../Chapter3/3.3-Plot.html">
+            
+                    
+                    3.3 绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Chapter3/3.4-Basic_Mathematics.html">
+            
+                <a href="../Chapter3/3.4-Basic_Mathematics.html">
+            
+                    
+                    3.4 基础数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.0-Calculus.html">
+            
+                <a href="4.0-Calculus.html">
+            
+                    
+                    第四章：微积分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="4.1-Limitation_and_Continuation.html">
+            
+                <a href="4.1-Limitation_and_Continuation.html">
+            
+                    
+                    4.1 极限与连续
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="4.2-Differential.html">
+            
+                <a href="4.2-Differential.html">
+            
+                    
+                    4.2 微分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="4.3-Integral.html">
+            
+                <a href="4.3-Integral.html">
+            
+                    
+                    4.3 积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="4.4-Ordinary_Differential_Equations.html">
+            
+                <a href="4.4-Ordinary_Differential_Equations.html">
+            
+                    
+                    4.4 常微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="4.5-Series.html">
+            
+                <a href="4.5-Series.html">
+            
+                    
+                    4.5 级数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="4.6-Space_Analytic_Geometry.html">
+            
+                <a href="4.6-Space_Analytic_Geometry.html">
+            
+                    
+                    4.6 空间解析几何
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="4.7-Partial_Derivative.html">
+            
+                <a href="4.7-Partial_Derivative.html">
+            
+                    
+                    4.7 偏导数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.8" data-path="4.8-Multiple_Integral.html">
+            
+                <a href="4.8-Multiple_Integral.html">
+            
+                    
+                    4.8 重积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/5.0-Linear_Algebra.html">
+            
+                <a href="../Chapter5/5.0-Linear_Algebra.html">
+            
+                    
+                    第五章：线性代数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5.1-Multin                        omial_and_Quadratic_Forms.md">
+            
+                <span>
+            
+                    
+                    5.1 矩阵与多项式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.html">
+            
+                <a href="../Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.html">
+            
+                    
+                    5.2 线性方程与二次型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter6/6.0-Probability_and_Statistics.html">
+            
+                <a href="../Chapter6/6.0-Probability_and_Statistics.html">
+            
+                    
+                    第六章：概率论与统计学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6.1-Basic_Expression.html">
+            
+                <a href="../Chapter6/6.1-Basic_Expression.html">
+            
+                    
+                    6.1 概率论与统计学基本表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6.2-Random_Variable.html">
+            
+                <a href="../Chapter6/6.2-Random_Variable.html">
+            
+                    
+                    6.2 随机变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6.3-Analysis_of_Variance_and_Regression.html">
+            
+                <a href="../Chapter6/6.3-Analysis_of_Variance_and_Regression.html">
+            
+                    
+                    6.3 方差分析与回归分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Chapter7/7.0-Partial_Differential_Equation.html">
+            
+                <a href="../Chapter7/7.0-Partial_Differential_Equation.html">
+            
+                    
+                    第七章：偏微分方程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7.1-Auxillary_Function.html">
+            
+                <a href="../Chapter7/7.1-Auxillary_Function.html">
+            
+                    
+                    7.1 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7.2-Solve_PDE.html">
+            
+                <a href="../Chapter7/7.2-Solve_PDE.html">
+            
+                    
+                    7.2 解偏微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7.3-Classification_of_PDE.html">
+            
+                <a href="../Chapter7/7.3-Classification_of_PDE.html">
+            
+                    
+                    7.3 偏微分方程分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Appendix/A-Conclusion.html">
+            
+                <a href="../Appendix/A-Conclusion.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Appendix/B-Expended_Reading.html">
+            
+                <a href="../Appendix/B-Expended_Reading.html">
+            
+                    
+                    拓展阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Appendix/C-Practice.html">
+            
+                <a href="../Appendix/C-Practice.html">
+            
+                    
+                    习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.8 重积分</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#48-&#x91CD;&#x79EF;&#x5206;"><b></b>4.8 &#x91CD;&#x79EF;&#x5206;</a></li></ul></div><a href="#48-&#x91CD;&#x79EF;&#x5206;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="48-&#x91CD;&#x79EF;&#x5206;"><a name="48-&#x91CD;&#x79EF;&#x5206;" class="anchor-navigation-ex-anchor" href="#48-&#x91CD;&#x79EF;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="48-&#x91CD;&#x79EF;&#x5206;" class="plugin-anchor" href="#48-&#x91CD;&#x79EF;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>4.8 &#x91CD;&#x79EF;&#x5206;</h1>
+<h4 id="&#x91CD;&#x79EF;&#x5206;&#x7684;&#x8BA1;&#x7B97;"><a name="&#x91CD;&#x79EF;&#x5206;&#x7684;&#x8BA1;&#x7B97;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x79EF;&#x5206;&#x7684;&#x8BA1;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x91CD;&#x79EF;&#x5206;&#x7684;&#x8BA1;&#x7B97;" class="plugin-anchor" href="#&#x91CD;&#x79EF;&#x5206;&#x7684;&#x8BA1;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x79EF;&#x5206;&#x7684;&#x8BA1;&#x7B97;</h4>
+<p>&#x5728;Integrate()&#x51FD;&#x6570;&#x4E2D;&#x5D4C;&#x5957;&#x591A;&#x5C42;Integrate()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x91CD;&#x79EF;&#x5206;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;&#x8BA1;&#x7B97;&#x79EF;&#x5206;&#x7684;&#x503C;&#x3002;</p>
+<p>[]:integrate(integrate(exp(-y**2), (y, x, 2)), (x, 0, 2)).simplify()</p>
+<p><img src="media/a72a0415c477146d1e4571d484d5c41f.png" alt="">[]:</p>
+<p>&#x4F8B;&#xFF1A;&#x8BA1;&#x7B97;&#x4E09;&#x91CD;&#x79EF;&#x5206;&#x5176;&#x4E2D;&#x4E3A;&#x5E73;&#x9762;&#x4E0E;&#x4E09;&#x4E2A;&#x5750;&#x6807;&#x9762;&#xFF0C;&#xFF0C;&#x56F4;&#x6210;&#x7684;&#x95ED;&#x533A;&#x57DF;&#x3002;&#xFF08;&#xFF09;</p>
+<p>[]:plot3d(1 - x - y, (x, 0, 1), (y, 0, 1), aspect_ratio=(1, 1, 1))</p>
+<p><img src="media/de1daf9cac3636ef5f72539cfc6ff85c.png" alt="C:\\Users\\Johan\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\E18883DA.tmp"></p>
+<p>[]:\<sympy.plotting.plot.plot at="" 0x12701ba8\=""></sympy.plotting.plot.plot></p>
+<p>[]:integrate(integrate(integrate(z, (z, 0, 1-x-y)), (y, 0, 1-x)), (x, 0, 1))</p>
+<p><img src="media/f465a7e3a9ea5cbbd168b2b71e124b0e.png" alt="">[]:</p>
+<h4 id="&#x91CD;&#x79EF;&#x5206;&#x7684;&#x5E94;&#x7528;"><a name="&#x91CD;&#x79EF;&#x5206;&#x7684;&#x5E94;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x79EF;&#x5206;&#x7684;&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x91CD;&#x79EF;&#x5206;&#x7684;&#x5E94;&#x7528;" class="plugin-anchor" href="#&#x91CD;&#x79EF;&#x5206;&#x7684;&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x79EF;&#x5206;&#x7684;&#x5E94;&#x7528;</h4>
+<p>&#x4F8B;&#xFF1A;&#x6C42;&#x66F2;&#x9762;&#x548C;&#x56F4;&#x6210;&#x7684;&#x4F53;&#x79EF;</p>
+<p>&#x9996;&#x5148;&#x4F7F;&#x7528;plot3d&#x7ED8;&#x5236;&#x51FA;&#x66F2;&#x9762;&#x56FE;&#x5F62;:</p>
+<p>[]:plot3d((x**2+y**2), (2-x**2-y**2))</p>
+<p><img src="media/adc35c7f3c9466552aeed4bc3b4f9e36.png" alt="C:\\Users\\Johan\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\8B72AC8.tmp"></p>
+<p>[]:\<sympy.plotting.plot.plot at="" 0x141fc6d8\=""></sympy.plotting.plot.plot></p>
+<p>[]:integrate(integrate(integrate(1,(z, r**2, 2-r**2)), (r, 0, 1)), (theta,
+0, 2*pi))</p>
+<p>[]:<img src="media/6a7fd950ff83c3ad5ef520c561e8065b.png" alt=""></p>
+<p>&#x4F8B;&#xFF1A;&#x8BA1;&#x7B97;&#x66F2;&#x9762;&#x548C; &#x6240;&#x56F4;&#x6210;&#x4F53;&#x79EF;</p>
+<p>[]:plot3d(x**2+2*y**2,3-2**2-y**2)</p>
+<p>&#x7531;&#x56FE;&#x50CF;&#x53EF;&#x77E5;&#xFF0C;&#x6240;&#x6C42;&#x4F53;&#x79EF;&#xFF0C;&#x5176;&#x4E2D;&#x79EF;&#x5206;&#x533A;&#x57DF;2}&#x3002;&#x4F7F;&#x7528;&#x6781;&#x5750;&#x6807;&#x8BA1;&#x7B97;&#x6B64;&#x79EF;&#x5206;&#xFF0C;</p>
+<p>integrate(integrate(integrate(6*r-r*r**3, (r, 0, sqrt(2)), (theta, 0,
+2*pi))</p>
+<p>&#x4F8B;&#xFF1A;&#x6C42;</p>
+<p>[]:integrate(integrate(x**2+y, (y, x**2, sqrt(x))), (x,0,1))</p>
+<p>[]:<img src="media/946ba3024d82c4d181c853198b09d42c.png" alt=""></p>
+<h4 id="&#x66F2;&#x7EBF;&#x79EF;&#x5206;"><a name="&#x66F2;&#x7EBF;&#x79EF;&#x5206;" class="anchor-navigation-ex-anchor" href="#&#x66F2;&#x7EBF;&#x79EF;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x66F2;&#x7EBF;&#x79EF;&#x5206;" class="plugin-anchor" href="#&#x66F2;&#x7EBF;&#x79EF;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F2;&#x7EBF;&#x79EF;&#x5206;</h4>
+<p>[]:from sympy import Curve, line_integrate, E, ln</p>
+<p>from sympy.abc import x, y, t</p>
+<p><em>[]:C = Curve([E\</em>*t + 1, E**t - 1], (t, 0, ln(2)))*</p>
+<p><em>line_integrate(x + y, C, [x, y])</em></p>
+<p><img src="media/8a773398109992002c18b98933f65972.png" alt="">[]:</p>
+<h4 id="&#x66F2;&#x9762;&#x79EF;&#x5206;"><a name="&#x66F2;&#x9762;&#x79EF;&#x5206;" class="anchor-navigation-ex-anchor" href="#&#x66F2;&#x9762;&#x79EF;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x66F2;&#x9762;&#x79EF;&#x5206;" class="plugin-anchor" href="#&#x66F2;&#x9762;&#x79EF;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F2;&#x9762;&#x79EF;&#x5206;</h4>
+<p>&#x7684;&#x4E0A;&#x4FA7;</p>
+<p><em>&#x5316;&#x4E09;&#x91CD;&#x79EF;&#x5206;&#x4E3A;&#x4E09;&#x6B21;&#x79EF;&#x5206;</em></p>
+<p><em>&#x5728;Jupyter Lab&#x4E2D;&#x5BF9;&#x8BE5;&#x79EF;&#x5206;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF1A;</em></p>
+<p><em>[]:integrate(integrate(integrate((2\</em>r*cos(theta)+2*r*sin(theta)+1)*r*</p>
+<p><em>, (z3,0, 1-r\</em>*2)), (r, 0, 1)), (theta, 0, 2*pi))*</p>
+<p><img src="media/c7130ba351a79f9287ab1e013ced87c5.png" alt=""><em>[]:</em></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4.7-Partial_Derivative.html" class="navigation navigation-prev " aria-label="Previous page: 4.7 偏导数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Chapter5/5.0-Linear_Algebra.html" class="navigation navigation-next " aria-label="Next page: 第五章：线性代数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.8 重积分","level":"1.5.8","depth":2,"next":{"title":"第五章：线性代数","level":"1.6","depth":1,"path":"Chapter5/5.0-Linear_Algebra.md","ref":"Chapter5/5.0-Linear_Algebra.md","articles":[{"title":"5.1 矩阵与多项式","level":"1.6.1","depth":2,"path":"Chapter5/5.1-Multin                        omial_and_Quadratic_Forms.md","ref":"Chapter5/5.1-Multin                        omial_and_Quadratic_Forms.md","articles":[]},{"title":"5.2 线性方程与二次型","level":"1.6.2","depth":2,"path":"Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.md","ref":"Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.md","articles":[]}]},"previous":{"title":"4.7 偏导数","level":"1.5.7","depth":2,"path":"Chapter4/4.7-Partial_Derivative.md","ref":"Chapter4/4.7-Partial_Derivative.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/JohannesLiu"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"donate","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"JohannesLiu","repo":"Knowledge-Extraction-Concept-and-Technology","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Johannes Liu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn Advanced Mathematics with Python","language":"zh-hans","links":{"sidebar":{"Home Page":"https://flyinghuster.com"}},"gitbook":"3.2.3","description":"A Cookbook for SymPy"},"file":{"path":"Chapter4/4.8-Multiple_Integral.md","mtime":"2021-08-08T07:36:58.183Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-08T09:53:24.135Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

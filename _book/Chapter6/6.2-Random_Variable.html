@@ -1,0 +1,949 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.2 随机变量 · Learn Advanced Mathematics with Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Johannes Liu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.3-Analysis_of_Variance_and_Regression.html" />
+    
+    
+    <link rel="prev" href="6.1-Basic_Expression.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"JohannesLiu","repo":"Knowledge-Extraction-Concept-and-Technology","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://flyinghuster.com" target="_blank" class="custom-link">Home Page</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/1.0-Prelimary.html">
+            
+                <a href="../Chapter1/1.0-Prelimary.html">
+            
+                    
+                    第一章：初步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1.1-Data_Science_Introduction.html">
+            
+                <a href="../Chapter1/1.1-Data_Science_Introduction.html">
+            
+                    
+                    1.1 数据结构概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1.2-Install Python Interpreter.html">
+            
+                <a href="../Chapter1/1.2-Install Python Interpreter.html">
+            
+                    
+                    1.2 安装Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1.3-Package_of_Python.html">
+            
+                <a href="../Chapter1/1.3-Package_of_Python.html">
+            
+                    
+                    1.3 Python类库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1.4-Anaconda.html">
+            
+                <a href="../Chapter1/1.4-Anaconda.html">
+            
+                    
+                    1.4 Anaconda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Chapter1/1.5-Jupyter.html">
+            
+                <a href="../Chapter1/1.5-Jupyter.html">
+            
+                    
+                    1.5 Jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Chapter1/1.6-Integrated_Development_Environment.html">
+            
+                <a href="../Chapter1/1.6-Integrated_Development_Environment.html">
+            
+                    
+                    1.6 集成开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/2.0-Prelimary_for_SymPy.html">
+            
+                <a href="../Chapter2/2.0-Prelimary_for_SymPy.html">
+            
+                    
+                    第二章：SymPy初步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2.1-Introduction_to_SymPy.html">
+            
+                <a href="../Chapter2/2.1-Introduction_to_SymPy.html">
+            
+                    
+                    2.1 初识SymPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2.2-Install_SymPy.html">
+            
+                <a href="../Chapter2/2.2-Install_SymPy.html">
+            
+                    
+                    2.2 安装SymPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2.3-Grammar_of_SymPy.html">
+            
+                <a href="../Chapter2/2.3-Grammar_of_SymPy.html">
+            
+                    
+                    2.3 SymPy语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/3.0-SymPy_Foundation.html">
+            
+                <a href="../Chapter3/3.0-SymPy_Foundation.html">
+            
+                    
+                    第三章：SymPy基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3.1-Basic_Manipulator.html">
+            
+                <a href="../Chapter3/3.1-Basic_Manipulator.html">
+            
+                    
+                    3.1 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3.                                            2-Print.md">
+            
+                <span>
+            
+                    
+                    3.2 打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Chapter3/3.3-Plot.html">
+            
+                <a href="../Chapter3/3.3-Plot.html">
+            
+                    
+                    3.3 绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Chapter3/3.4-Basic_Mathematics.html">
+            
+                <a href="../Chapter3/3.4-Basic_Mathematics.html">
+            
+                    
+                    3.4 基础数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter4/4.0-Calculus.html">
+            
+                <a href="../Chapter4/4.0-Calculus.html">
+            
+                    
+                    第四章：微积分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4.1-Limitation_and_Continuation.html">
+            
+                <a href="../Chapter4/4.1-Limitation_and_Continuation.html">
+            
+                    
+                    4.1 极限与连续
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4.2-Differential.html">
+            
+                <a href="../Chapter4/4.2-Differential.html">
+            
+                    
+                    4.2 微分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4.3-Integral.html">
+            
+                <a href="../Chapter4/4.3-Integral.html">
+            
+                    
+                    4.3 积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4.4-Ordinary_Differential_Equations.html">
+            
+                <a href="../Chapter4/4.4-Ordinary_Differential_Equations.html">
+            
+                    
+                    4.4 常微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Chapter4/4.5-Series.html">
+            
+                <a href="../Chapter4/4.5-Series.html">
+            
+                    
+                    4.5 级数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Chapter4/4.6-Space_Analytic_Geometry.html">
+            
+                <a href="../Chapter4/4.6-Space_Analytic_Geometry.html">
+            
+                    
+                    4.6 空间解析几何
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Chapter4/4.7-Partial_Derivative.html">
+            
+                <a href="../Chapter4/4.7-Partial_Derivative.html">
+            
+                    
+                    4.7 偏导数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Chapter4/4.8-Multiple_Integral.html">
+            
+                <a href="../Chapter4/4.8-Multiple_Integral.html">
+            
+                    
+                    4.8 重积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/5.0-Linear_Algebra.html">
+            
+                <a href="../Chapter5/5.0-Linear_Algebra.html">
+            
+                    
+                    第五章：线性代数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5.1-Multin                        omial_and_Quadratic_Forms.md">
+            
+                <span>
+            
+                    
+                    5.1 矩阵与多项式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.html">
+            
+                <a href="../Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.html">
+            
+                    
+                    5.2 线性方程与二次型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.0-Probability_and_Statistics.html">
+            
+                <a href="6.0-Probability_and_Statistics.html">
+            
+                    
+                    第六章：概率论与统计学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="6.1-Basic_Expression.html">
+            
+                <a href="6.1-Basic_Expression.html">
+            
+                    
+                    6.1 概率论与统计学基本表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="6.2-Random_Variable.html">
+            
+                <a href="6.2-Random_Variable.html">
+            
+                    
+                    6.2 随机变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="6.3-Analysis_of_Variance_and_Regression.html">
+            
+                <a href="6.3-Analysis_of_Variance_and_Regression.html">
+            
+                    
+                    6.3 方差分析与回归分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Chapter7/7.0-Partial_Differential_Equation.html">
+            
+                <a href="../Chapter7/7.0-Partial_Differential_Equation.html">
+            
+                    
+                    第七章：偏微分方程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7.1-Auxillary_Function.html">
+            
+                <a href="../Chapter7/7.1-Auxillary_Function.html">
+            
+                    
+                    7.1 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7.2-Solve_PDE.html">
+            
+                <a href="../Chapter7/7.2-Solve_PDE.html">
+            
+                    
+                    7.2 解偏微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7.3-Classification_of_PDE.html">
+            
+                <a href="../Chapter7/7.3-Classification_of_PDE.html">
+            
+                    
+                    7.3 偏微分方程分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Appendix/A-Conclusion.html">
+            
+                <a href="../Appendix/A-Conclusion.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Appendix/B-Expended_Reading.html">
+            
+                <a href="../Appendix/B-Expended_Reading.html">
+            
+                    
+                    拓展阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Appendix/C-Practice.html">
+            
+                <a href="../Appendix/C-Practice.html">
+            
+                    
+                    习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.2 随机变量</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#62-&#x968F;&#x673A;&#x53D8;&#x91CF;"><b></b>6.2 &#x968F;&#x673A;&#x53D8;&#x91CF;</a></li></ul></div><a href="#62-&#x968F;&#x673A;&#x53D8;&#x91CF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="62-&#x968F;&#x673A;&#x53D8;&#x91CF;"><a name="62-&#x968F;&#x673A;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#62-&#x968F;&#x673A;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="62-&#x968F;&#x673A;&#x53D8;&#x91CF;" class="plugin-anchor" href="#62-&#x968F;&#x673A;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2 &#x968F;&#x673A;&#x53D8;&#x91CF;</h1>
+<p>&#x672C;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x6982;&#x7387;&#x8BBA;&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8BB2;&#x89E3;&#x3002;SymPy&#x4E2D;&#x5173;&#x4E8E;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x7684;API&#x90FD;&#x5341;&#x5206;&#x7B80;&#x5355;&#xFF0C;&#x5728;&#x6B64;&#x6211;&#x4EEC;&#x4EC5;&#x4EC5;&#x7ED9;&#x51FA;API&#x7684;&#x4E00;&#x822C;&#x5F62;&#x5F0F;&#xFF0C;&#x4E0D;&#x518D;&#x5BF9;&#x5B83;&#x4EEC;&#x7684;&#x4F7F;&#x7528;&#x8FDB;&#x884C;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#x3002;&#x8BFB;&#x8005;&#x6839;&#x636E;&#x76F8;&#x5173;&#x5B9E;&#x4F8B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x638C;&#x63E1;&#x8FD9;&#x4E9B;API&#x7684;&#x7528;&#x6CD5;&#x3002;</p>
+<h4 id="&#x79BB;&#x6563;&#x578B;&#x968F;&#x673A;&#x53D8;&#x91CF;"><a name="&#x79BB;&#x6563;&#x578B;&#x968F;&#x673A;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x79BB;&#x6563;&#x578B;&#x968F;&#x673A;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x79BB;&#x6563;&#x578B;&#x968F;&#x673A;&#x53D8;&#x91CF;" class="plugin-anchor" href="#&#x79BB;&#x6563;&#x578B;&#x968F;&#x673A;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79BB;&#x6563;&#x578B;&#x968F;&#x673A;&#x53D8;&#x91CF;</h4>
+<p>0-1&#x5206;&#x5E03;</p>
+<p>sympy.stats.Bernoulli(name, p, succ=1, fail=0)</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x4F2F;&#x52AA;&#x5229;&#x8FC7;&#x7A0B;&#x7684;&#x6709;&#x9650;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x3002;&#x5982;&#x679C;&#x968F;&#x673A;&#x53D8;&#x91CF;X&#x6EE1;&#x8DB3;&#x4F2F;&#x52AA;&#x5229;&#x5206;&#x5E03;&#xFF0C;&#x5219;X&#x7684;&#x5206;&#x5E03;&#x5F8B;&#x4E3A;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>[]:from sympy.stats import Bernoulli</p>
+<p>&#x4F8B;&#xFF1A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x8BA1;&#x7B97;&#x671F;&#x671B;</p>
+<p>[]:X = Bernoulli(&apos;X&apos;, S(3)/4) # 1-0 Bernoulli variable, probability = 3/4</p>
+<p>density(X).dict</p>
+<p><img src="media/62cb22c52b76fc4349ef51ff8b835a4c.png" alt="">[]:</p>
+<p>[]:E(x)</p>
+<p><img src="media/9030d53913e11b43f510c4c4bf74c5b2.png" alt="">[]:</p>
+<p>&#x4E8C;&#x9879;&#x5206;&#x5E03;</p>
+<p>sympy.stats.Binomial(<em>name</em>, <em>n</em>, <em>p</em>, <em>succ=1</em>, <em>fail=0</em>)</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x4E8C;&#x9879;&#x5206;&#x5E03;&#x7684;&#x6709;&#x9650;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x3002;&#x5982;&#x679C;&#x968F;&#x673A;&#x53D8;&#x91CF;X&#x6EE1;&#x8DB3;&#x4F2F;&#x52AA;&#x5229;&#x5206;&#x5E03;&#xFF0C;&#x5219;X&#x7684;&#x5206;&#x5E03;&#x5F8B;&#x4E3A;&#xFF1A;</p>
+<p>&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>[]:from sympy.stats import Binomial</p>
+<p>&#x4F8B;&#xFF1A;&#x521B;&#x5EFA;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x7A7A;&#x95F4;&#x7EF4;&#x5EA6;&#x4E3A;5&#x7684;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x8BA1;&#x7B97;&#x5176;&#x671F;&#x671B;&#x4E0E;&#x65B9;&#x5DEE;</p>
+<p>[]:X = Binomial(&apos;X&apos;, 4, S.Half) # Four &quot;coin flips&quot;</p>
+<p>density(X).dict</p>
+<p>[]:<img src="media/e675c4eaad6b5f2060311e8ef5165c4f.png" alt=""></p>
+<p>[]:<img src="media/066732ee90fe1921432c20a8c6753441.png" alt=""></p>
+<p>&#x8D85;&#x51E0;&#x4F55;&#x5206;&#x5E03;</p>
+<p>sympy.stats.Hypergeometric(<em>name</em>, <em>N</em>, <em>m</em>, <em>n</em>)</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x8D85;&#x51E0;&#x4F55;&#x5206;&#x5E03;&#x7684;&#x6709;&#x9650;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x3002;&#x5982;&#x679C;&#x968F;&#x673A;&#x53D8;&#x91CF;X&#x6EE1;&#x8DB3;&#x8D85;&#x51E0;&#x4F55;&#x5206;&#x5E03;&#xFF0C;&#x5219;X&#x7684;&#x5206;&#x5E03;&#x5F8B;&#x4E3A;&#xFF1A;</p>
+<p>&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>[]:from sympy.stats import Hypergeometric</p>
+<p>&#x4F8B;&#xFF1A;&#x6709;&#x5341;&#x4E2A;&#x5C0F;&#x7403;&#xFF0C;&#x5176;&#x4E2D;&#x7EA2;&#x8272;&#x5C0F;&#x7403;&#x6570;&#x91CF;&#x4E3A;5&#xFF0C;&#x84DD;&#x8272;&#x5C0F;&#x7403;&#x6570;&#x91CF;&#x4E3A;3&#xFF0C;&#x767D;&#x8272;&#x5C0F;&#x7403;&#x6570;&#x91CF;&#x4E3A;2&#x3002;&#x73B0;&#x4ECE;&#x8FD9;&#x4E9B;&#x5C0F;&#x7403;&#x4E2D;&#x4EFB;&#x53D6;3&#x4E2A;&#x3002;&#x8BBE;&#x968F;&#x673A;&#x53D8;&#x91CF;X&#x4E3A;&#x88AB;&#x53D6;&#x4E2D;&#x7684;&#x7EA2;&#x8272;&#x5C0F;&#x7403;&#x4E2A;&#x6570;&#xFF0C;&#x6C42;&#x7684;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#xFF0C;&#x6982;&#x7387;&#x5206;&#x5E03;&#x51FD;&#x6570;&#xFF0C;&#x671F;&#x671B;&#xFF0C;&#x65B9;&#x5DEE;&#xFF0C;&#x6807;&#x51C6;&#x5DEE;&#x3002;</p>
+<p>[]:X = Hypergeometric(&apos;X&apos;, 10, 5, 3) # 10 marbles, 5 white (success), 3 draws</p>
+<p>density(X).dict, cdf(X), E(x), variance(X), std(X)</p>
+<p>[]:<img src="media/7b4b85eb5d270b5d7a7740b1d07076cb.png" alt=""></p>
+<p>&#x6CCA;&#x677E;&#x5206;&#x5E03;</p>
+<p>sympy.stats.Poisson(name, lamda)</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x6CCA;&#x677E;&#x5206;&#x5E03;&#x7684;&#x79BB;&#x6563;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x3002;&#x6CCA;&#x677E;&#x5206;&#x5E03;&#x7684;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#x4E3A;</p>
+<p>&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>[]:from sympy.stats import Posson</p>
+<p>&#x4F8B;&#xFF1A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x670D;&#x4ECE;&#x53C2;&#x6570;&#x4E3A;&#x7684;&#x6CCA;&#x677E;&#x5206;&#x5E03;&#xFF0C;&#x6C42;&#x5176;&#x671F;&#x671B;&#x4E0E;&#x65B9;&#x5DEE;</p>
+<p>[]:rate = Symbol(&quot;lambda&quot;, positive=True)</p>
+<p>z = Symbol(&quot;z&quot;)</p>
+<p>X = Poisson(&quot;x&quot;, rate)</p>
+<p>density(X)(z)</p>
+<p>[]:<img src="media/80b11d795fccfd0d8e9fa4f689947337.png" alt=""></p>
+<p>[]:E(X), variance(X)</p>
+<p>[]:<img src="media/5acd82d14ecdba4814d2e721fabaad9c.png" alt=""></p>
+<p>&#x8FDE;&#x7EED;&#x578B;&#x968F;&#x673A;&#x53D8;&#x91CF;</p>
+<p>&#x5747;&#x5300;&#x5206;&#x5E03;</p>
+<p>sympy.stats.Uniform(<em>name</em>, <em>left</em>, <em>right</em>)</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;&#x8FDE;&#x7EED;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x3002;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#x4E3A;&#xFF1A;</p>
+<p>&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>[]from sympy.stats import Uniform</p>
+<p>&#x4F8B;&#xFF1A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x5728;&#x533A;&#x95F4;&#x4E0A;&#x670D;&#x4ECE;&#x5747;&#x5300;&#x5206;&#x5E03;&#xFF0C;&#x6C42;&#x5176;&#x7D2F;&#x79EF;&#x5206;&#x5E03;&#x51FD;&#x6570;</p>
+<p>[]:a = Symbol(&quot;a&quot;, negative=True)</p>
+<p>b = Symbol(&quot;b&quot;, positive=True)</p>
+<p>z = Symbol(&quot;z&quot;)</p>
+<p>X = Uniform(&quot;x&quot;, a, b)</p>
+<p>density(X)(z)</p>
+<p>[]:<img src="media/96ccdb2b6b83f5d946481bc0f61da194.png" alt=""></p>
+<p>[]:cdf(X)(z)</p>
+<p><img src="media/d5a4bab52fa5e7fc259ae4dda83ba660.png" alt=""></p>
+<p>[]:simplify(E(X)),simplify(variance(X))</p>
+<p>[]:<img src="media/c6a0c1637dca05930cbf231d0192a128.png" alt=""></p>
+<p>&#x6307;&#x6570;&#x5206;&#x5E03;</p>
+<p>sympy.stats.Exponential(<em>name</em>, <em>rate</em>)</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6307;&#x6570;&#x5206;&#x5E03;&#x7684;&#x8FDE;&#x7EED;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x3002;&#x6307;&#x6570;&#x5206;&#x5E03;&#x7684;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#x4E3A;</p>
+<p>&#x4F8B;&#xFF1A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x670D;&#x4ECE;&#x53C2;&#x6570;&#x4E3A;&#x6307;&#x6570;&#x5206;&#x5E03;&#xFF0C;&#x6C42;&#x5176;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#xFF0C;&#x7D2F;&#x79EF;&#x5206;&#x5E03;&#x51FD;&#x6570;&#xFF0C;&#x671F;&#x671B;&#xFF0C;&#x65B9;&#x5DEE;&#xFF0C;&#x504F;&#x6001;&#x7CFB;&#x6570;</p>
+<p>[]:l = Symbol(&quot;lambda&quot;, positive=True)</p>
+<p>z = Symbol(&quot;z&quot;)</p>
+<p>X = Exponential(&quot;x&quot;, l)</p>
+<p>density(X)(z),cdf(X)(z),E(X),variance(X),skewness(X)</p>
+<p><img src="media/4f289a5600641189e4ec91aa32e17539.png" alt="">[]:</p>
+<p>&#x6B63;&#x6001;&#x5206;&#x5E03;</p>
+<p>sympy.stats.Normal(<em>name</em>, <em>mean</em>, <em>std</em>)</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;&#x8FDE;&#x7EED;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x3002;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#x4E3A;&#xFF1A;</p>
+<p>&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>[]:from sympy.stats import Normal</p>
+<p>&#x4F8B;&#xFF1A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x670D;&#x4ECE;&#x53C2;&#x6570;&#x7684;&#x6B63;&#x6001;&#x5206;&#x5E03;&#xFF0C;&#x6C42;&#x5176;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#xFF0C;&#x7D2F;&#x79EF;&#x5206;&#x5E03;&#x51FD;&#x6570;&#xFF0C;&#x504F;&#x6001;&#x7CFB;&#x6570;</p>
+<p>mu = Symbol(&quot;mu&quot;)</p>
+<p>sigma = Symbol(&quot;sigma&quot;, positive=True)</p>
+<p>z = Symbol(&quot;z&quot;)</p>
+<p>y = Symbol(&quot;y&quot;)</p>
+<p>X = Normal(&quot;x&quot;, mu, sigma)</p>
+<p>density(X)(z),simplify(cdf(X))(z),simplify(skewness(X))</p>
+<p><img src="media/2e1094095d4611062d11db6f400dc422.png" alt="">[]:</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.1-Basic_Expression.html" class="navigation navigation-prev " aria-label="Previous page: 6.1 概率论与统计学基本表达式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.3-Analysis_of_Variance_and_Regression.html" class="navigation navigation-next " aria-label="Next page: 6.3 方差分析与回归分析">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.2 随机变量","level":"1.7.2","depth":2,"next":{"title":"6.3 方差分析与回归分析","level":"1.7.3","depth":2,"path":"Chapter6/6.3-Analysis_of_Variance_and_Regression.md","ref":"Chapter6/6.3-Analysis_of_Variance_and_Regression.md","articles":[]},"previous":{"title":"6.1 概率论与统计学基本表达式","level":"1.7.1","depth":2,"path":"Chapter6/6.1-Basic_Expression.md","ref":"Chapter6/6.1-Basic_Expression.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/JohannesLiu"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"donate","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"JohannesLiu","repo":"Knowledge-Extraction-Concept-and-Technology","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Johannes Liu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn Advanced Mathematics with Python","language":"zh-hans","links":{"sidebar":{"Home Page":"https://flyinghuster.com"}},"gitbook":"3.2.3","description":"A Cookbook for SymPy"},"file":{"path":"Chapter6/6.2-Random_Variable.md","mtime":"2021-08-08T07:39:27.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-08T09:53:24.135Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

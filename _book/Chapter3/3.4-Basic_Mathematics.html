@@ -1,0 +1,989 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.4 基础数学 · Learn Advanced Mathematics with Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Johannes Liu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Chapter4/4.0-Calculus.html" />
+    
+    
+    <link rel="prev" href="3.3-Plot.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"JohannesLiu","repo":"Knowledge-Extraction-Concept-and-Technology","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://flyinghuster.com" target="_blank" class="custom-link">Home Page</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/1.0-Prelimary.html">
+            
+                <a href="../Chapter1/1.0-Prelimary.html">
+            
+                    
+                    第一章：初步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1.1-Data_Science_Introduction.html">
+            
+                <a href="../Chapter1/1.1-Data_Science_Introduction.html">
+            
+                    
+                    1.1 数据结构概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1.2-Install Python Interpreter.html">
+            
+                <a href="../Chapter1/1.2-Install Python Interpreter.html">
+            
+                    
+                    1.2 安装Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1.3-Package_of_Python.html">
+            
+                <a href="../Chapter1/1.3-Package_of_Python.html">
+            
+                    
+                    1.3 Python类库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1.4-Anaconda.html">
+            
+                <a href="../Chapter1/1.4-Anaconda.html">
+            
+                    
+                    1.4 Anaconda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Chapter1/1.5-Jupyter.html">
+            
+                <a href="../Chapter1/1.5-Jupyter.html">
+            
+                    
+                    1.5 Jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Chapter1/1.6-Integrated_Development_Environment.html">
+            
+                <a href="../Chapter1/1.6-Integrated_Development_Environment.html">
+            
+                    
+                    1.6 集成开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/2.0-Prelimary_for_SymPy.html">
+            
+                <a href="../Chapter2/2.0-Prelimary_for_SymPy.html">
+            
+                    
+                    第二章：SymPy初步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2.1-Introduction_to_SymPy.html">
+            
+                <a href="../Chapter2/2.1-Introduction_to_SymPy.html">
+            
+                    
+                    2.1 初识SymPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2.2-Install_SymPy.html">
+            
+                <a href="../Chapter2/2.2-Install_SymPy.html">
+            
+                    
+                    2.2 安装SymPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2.3-Grammar_of_SymPy.html">
+            
+                <a href="../Chapter2/2.3-Grammar_of_SymPy.html">
+            
+                    
+                    2.3 SymPy语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.0-SymPy_Foundation.html">
+            
+                <a href="3.0-SymPy_Foundation.html">
+            
+                    
+                    第三章：SymPy基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.1-Basic_Manipulator.html">
+            
+                <a href="3.1-Basic_Manipulator.html">
+            
+                    
+                    3.1 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3.                                            2-Print.md">
+            
+                <span>
+            
+                    
+                    3.2 打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3.3-Plot.html">
+            
+                <a href="3.3-Plot.html">
+            
+                    
+                    3.3 绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="3.4-Basic_Mathematics.html">
+            
+                <a href="3.4-Basic_Mathematics.html">
+            
+                    
+                    3.4 基础数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter4/4.0-Calculus.html">
+            
+                <a href="../Chapter4/4.0-Calculus.html">
+            
+                    
+                    第四章：微积分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4.1-Limitation_and_Continuation.html">
+            
+                <a href="../Chapter4/4.1-Limitation_and_Continuation.html">
+            
+                    
+                    4.1 极限与连续
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4.2-Differential.html">
+            
+                <a href="../Chapter4/4.2-Differential.html">
+            
+                    
+                    4.2 微分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4.3-Integral.html">
+            
+                <a href="../Chapter4/4.3-Integral.html">
+            
+                    
+                    4.3 积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4.4-Ordinary_Differential_Equations.html">
+            
+                <a href="../Chapter4/4.4-Ordinary_Differential_Equations.html">
+            
+                    
+                    4.4 常微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Chapter4/4.5-Series.html">
+            
+                <a href="../Chapter4/4.5-Series.html">
+            
+                    
+                    4.5 级数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Chapter4/4.6-Space_Analytic_Geometry.html">
+            
+                <a href="../Chapter4/4.6-Space_Analytic_Geometry.html">
+            
+                    
+                    4.6 空间解析几何
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Chapter4/4.7-Partial_Derivative.html">
+            
+                <a href="../Chapter4/4.7-Partial_Derivative.html">
+            
+                    
+                    4.7 偏导数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Chapter4/4.8-Multiple_Integral.html">
+            
+                <a href="../Chapter4/4.8-Multiple_Integral.html">
+            
+                    
+                    4.8 重积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/5.0-Linear_Algebra.html">
+            
+                <a href="../Chapter5/5.0-Linear_Algebra.html">
+            
+                    
+                    第五章：线性代数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5.1-Multin                        omial_and_Quadratic_Forms.md">
+            
+                <span>
+            
+                    
+                    5.1 矩阵与多项式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.html">
+            
+                <a href="../Chapter5/5.2-Linear_Equations_and_Quadratic_Forms.html">
+            
+                    
+                    5.2 线性方程与二次型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter6/6.0-Probability_and_Statistics.html">
+            
+                <a href="../Chapter6/6.0-Probability_and_Statistics.html">
+            
+                    
+                    第六章：概率论与统计学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6.1-Basic_Expression.html">
+            
+                <a href="../Chapter6/6.1-Basic_Expression.html">
+            
+                    
+                    6.1 概率论与统计学基本表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6.2-Random_Variable.html">
+            
+                <a href="../Chapter6/6.2-Random_Variable.html">
+            
+                    
+                    6.2 随机变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6.3-Analysis_of_Variance_and_Regression.html">
+            
+                <a href="../Chapter6/6.3-Analysis_of_Variance_and_Regression.html">
+            
+                    
+                    6.3 方差分析与回归分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Chapter7/7.0-Partial_Differential_Equation.html">
+            
+                <a href="../Chapter7/7.0-Partial_Differential_Equation.html">
+            
+                    
+                    第七章：偏微分方程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7.1-Auxillary_Function.html">
+            
+                <a href="../Chapter7/7.1-Auxillary_Function.html">
+            
+                    
+                    7.1 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7.2-Solve_PDE.html">
+            
+                <a href="../Chapter7/7.2-Solve_PDE.html">
+            
+                    
+                    7.2 解偏微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7.3-Classification_of_PDE.html">
+            
+                <a href="../Chapter7/7.3-Classification_of_PDE.html">
+            
+                    
+                    7.3 偏微分方程分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Appendix/A-Conclusion.html">
+            
+                <a href="../Appendix/A-Conclusion.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Appendix/B-Expended_Reading.html">
+            
+                <a href="../Appendix/B-Expended_Reading.html">
+            
+                    
+                    拓展阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Appendix/C-Practice.html">
+            
+                <a href="../Appendix/C-Practice.html">
+            
+                    
+                    习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.4 基础数学</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#34-&#x57FA;&#x7840;&#x6570;&#x5B66;"><b></b>3.4 &#x57FA;&#x7840;&#x6570;&#x5B66;</a></li></ul></div><a href="#34-&#x57FA;&#x7840;&#x6570;&#x5B66;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="34-&#x57FA;&#x7840;&#x6570;&#x5B66;"><a name="34-&#x57FA;&#x7840;&#x6570;&#x5B66;" class="anchor-navigation-ex-anchor" href="#34-&#x57FA;&#x7840;&#x6570;&#x5B66;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="34-&#x57FA;&#x7840;&#x6570;&#x5B66;" class="plugin-anchor" href="#34-&#x57FA;&#x7840;&#x6570;&#x5B66;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 &#x57FA;&#x7840;&#x6570;&#x5B66;</h1>
+<h4 id="931-&#x5316;&#x7B80;"><a name="931-&#x5316;&#x7B80;" class="anchor-navigation-ex-anchor" href="#931-&#x5316;&#x7B80;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="931-&#x5316;&#x7B80;" class="plugin-anchor" href="#931-&#x5316;&#x7B80;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.1 &#x5316;&#x7B80;</h4>
+<p>&#x4F7F;&#x7528;simplify()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x5316;&#x7B80;&#xFF0C;simplify()&#x51FD;&#x6570;&#x4EE5;&#x5B57;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;SymPy&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5316;&#x7B80;&#x7ED3;&#x679C;&#x3002;</p>
+<p>[]:expr=(x**3 + x**2 - x - 1)/(x**2 + 2*x + 1)</p>
+<p>simplify(expr)</p>
+<p><img src="media/693baf61e294e2d9520d2df53cb2b976.png" alt="">[]:</p>
+<h4 id="932-&#x5C55;&#x5F00;"><a name="932-&#x5C55;&#x5F00;" class="anchor-navigation-ex-anchor" href="#932-&#x5C55;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="932-&#x5C55;&#x5F00;" class="plugin-anchor" href="#932-&#x5C55;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.2 &#x5C55;&#x5F00;</h4>
+<h5 id="&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;"><a name="&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;" class="plugin-anchor" href="#&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;</h5>
+<p>&#x4F7F;&#x7528;expand()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x591A;&#x9879;&#x5F0F;&#x8FDB;&#x884C;&#x5C55;&#x5F00;&#xFF0C;expand()&#x51FD;&#x6570;&#x4EE5;&#x591A;&#x9879;&#x5F0F;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;SymPy&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x5316;&#x7B80;&#x7ED3;&#x679C;&#x3002;</p>
+<blockquote>
+<p>  []:expr=(1+2*x+4*y)**3</p>
+<p>  expand(expr)</p>
+</blockquote>
+<p><img src="media/9de4ee22e0c15e4395c6d7149b54c01e.png" alt=""> []:</p>
+<h5 id="&#x4E09;&#x89D2;&#x5C55;&#x5F00;"><a name="&#x4E09;&#x89D2;&#x5C55;&#x5F00;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x89D2;&#x5C55;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E09;&#x89D2;&#x5C55;&#x5F00;" class="plugin-anchor" href="#&#x4E09;&#x89D2;&#x5C55;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x89D2;&#x5C55;&#x5F00;</h5>
+<p>&#x4F7F;&#x7528;expand_trig()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x4E09;&#x89D2;&#x591A;&#x9879;&#x5F0F;&#x8FDB;&#x884C;&#x5C55;&#x5F00;&#xFF0C;expand_trig()&#x51FD;&#x6570;&#x4EE5;&#x4E09;&#x89D2;&#x591A;&#x9879;&#x5F0F;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;SymPy&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x5316;&#x7B80;&#x7ED3;&#x679C;&#x3002;</p>
+<p>[]:expr=sin(2*x)+cos(2*x)</p>
+<p>expand_trig(expr)</p>
+<p><img src="media/1430001b9347e2b0fd011e48c0059f47.png" alt="">[]:</p>
+<h4 id="933-&#x56E0;&#x5F0F;&#x5206;&#x89E3;"><a name="933-&#x56E0;&#x5F0F;&#x5206;&#x89E3;" class="anchor-navigation-ex-anchor" href="#933-&#x56E0;&#x5F0F;&#x5206;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="933-&#x56E0;&#x5F0F;&#x5206;&#x89E3;" class="plugin-anchor" href="#933-&#x56E0;&#x5F0F;&#x5206;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.3 &#x56E0;&#x5F0F;&#x5206;&#x89E3;</h4>
+<p>&#x4F7F;&#x7528;factor()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x7B26;&#x53F7;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x56E0;&#x5F0F;&#x5206;&#x89E3;&#xFF0C;factor()&#x51FD;&#x6570;&#x4EE5;&#x5B57;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x5B57;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x56E0;&#x5F0F;&#x5206;&#x89E3;&#x7ED3;&#x679C;&#x3002;</p>
+<p>[]:expr=x**3-x**2+x-1</p>
+<p>factor(expr)</p>
+<p><img src="media/7361e165642913a71684d59982f83000.png" alt="">[]:</p>
+<h4 id="934-&#x5408;&#x5E76;&#x540C;&#x7C7B;&#x9879;"><a name="934-&#x5408;&#x5E76;&#x540C;&#x7C7B;&#x9879;" class="anchor-navigation-ex-anchor" href="#934-&#x5408;&#x5E76;&#x540C;&#x7C7B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="934-&#x5408;&#x5E76;&#x540C;&#x7C7B;&#x9879;" class="plugin-anchor" href="#934-&#x5408;&#x5E76;&#x540C;&#x7C7B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.4 &#x5408;&#x5E76;&#x540C;&#x7C7B;&#x9879;</h4>
+<p>&#x4F7F;&#x7528;collect()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x7B26;&#x53F7;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x540C;&#x7C7B;&#x9879;&#x5408;&#x5E76;&#xFF0C;collect()&#x51FD;&#x6570;&#x4EE5;&#x5B57;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x5B57;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x540C;&#x7C7B;&#x9879;&#x5408;&#x5E76;&#x7ED3;&#x679C;&#x7ED3;&#x679C;&#x3002;&#x4F7F;&#x7528;expr.collect.coeff(expr,
+n)&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x524D;&#x7684;&#x7CFB;&#x6570;&#x3002;</p>
+<p>[]:expr = x*y + x - 3 + 2*x**2 - z*x**2 + x**3</p>
+<p>collected_expr=collect(expr, x)</p>
+<p>collected_expr</p>
+<p><img src="media/e22ba9652469cd5c12867ce04303cef1.png" alt="">[]:</p>
+<p>[]:collected_expr.coeff(x,2)</p>
+<p><img src="media/358193e5c6281e8a23bee927e60948a7.png" alt="">[]:</p>
+<h4 id="935-&#x89E3;&#x4E00;&#x5143;&#x65B9;&#x7A0B;"><a name="935-&#x89E3;&#x4E00;&#x5143;&#x65B9;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#935-&#x89E3;&#x4E00;&#x5143;&#x65B9;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="935-&#x89E3;&#x4E00;&#x5143;&#x65B9;&#x7A0B;" class="plugin-anchor" href="#935-&#x89E3;&#x4E00;&#x5143;&#x65B9;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.5 &#x89E3;&#x4E00;&#x5143;&#x65B9;&#x7A0B;</h4>
+<p>&#x4F7F;&#x7528;solveset()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x4E00;&#x5143;&#x65B9;&#x7A0B;&#x8FDB;&#x884C;&#x6C42;&#x89E3;&#xFF0C;solveset()&#x51FD;&#x6570;&#x4EE5;&#x5B57;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x96C6;&#x5408;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x4E00;&#x5143;&#x65B9;&#x7A0B;&#x7684;&#x89E3;&#x3002;</p>
+<p>[]:solveset((x+1)*(x+3)-15, x)</p>
+<p><img src="media/9745f1a9a3df4ae30a136e3591e55a3a.png" alt="">[]:</p>
+<p>Eq()&#x51FD;&#x6570;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7B49;&#x5F0F;&#xFF0C;eq()&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#x7B49;&#x53F7;&#x7684;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x6570;&#x5B66;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p>[]:Equ=Eq((x+1)*(x+3), 15)</p>
+<p>solveset(Equ, x)</p>
+<p><img src="media/9745f1a9a3df4ae30a136e3591e55a3a.png" alt="">[]:</p>
+<h4 id="936-&#x89E3;&#x65B9;&#x7A0B;&#x7EC4;"><a name="936-&#x89E3;&#x65B9;&#x7A0B;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#936-&#x89E3;&#x65B9;&#x7A0B;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="936-&#x89E3;&#x65B9;&#x7A0B;&#x7EC4;" class="plugin-anchor" href="#936-&#x89E3;&#x65B9;&#x7A0B;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.6 &#x89E3;&#x65B9;&#x7A0B;&#x7EC4;</h4>
+<h5 id="&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;"><a name="&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;</h5>
+<p>&#x4F7F;&#x7528;linsolve()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;&#x65B9;&#x7A0B;&#x7EC4;&#x8FDB;&#x884C;&#x6C42;&#x89E3;&#x3002;</p>
+<p>linsolve()&#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>sympy.solvers.solveset.linsolve(system, *symbols)</p>
+<p>&#x5176;&#x4E2D;system&#x4EE3;&#x4E4B;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;&#x4E5F;&#x5373;&#x9700;&#x8981;&#x89E3;&#x7684;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x3002;*symbols&#x4E3A;&#x9700;&#x8981;&#x6C42;&#x89E3;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x6C42;&#x89E3;&#x7ED3;&#x679C;&#x4EE5;&#x96C6;&#x5408;&#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;&#x6C42;&#x89E3;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;</p>
+<p>[]:linsolve([3*x+2*y+z-39, 2*x+3*y+z-34, x+2*y+3*z-26], (x, y, z))</p>
+<p><img src="media/7667729dc84ce930c6f3b0f36698ad25.png" alt="">[]:</p>
+<h5 id="&#x975E;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;"><a name="&#x975E;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x975E;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#&#x975E;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;</h5>
+<p>&#x4F7F;&#x7528;nonlinsolve()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;&#x65B9;&#x7A0B;&#x7EC4;&#x8FDB;&#x884C;&#x6C42;&#x89E3;&#x3002;</p>
+<p>nonlinsolve()&#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>sympy.solvers.solveset.linsolve(system, *symbols)</p>
+<p>&#x5176;&#x4E2D;system&#x4EE3;&#x4E4B;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;&#x4E5F;&#x5373;&#x9700;&#x8981;&#x89E3;&#x7684;&#x975E;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x3002;*symbols&#x4E3A;&#x9700;&#x8981;&#x6C42;&#x89E3;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x6C42;&#x89E3;&#x7ED3;&#x679C;&#x4EE5;&#x96C6;&#x5408;&#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;&#x6C42;&#x89E3;&#x975E;&#x7EBF;&#x6027;&#x7CFB;&#x7EDF;</p>
+<p>[]:nonlinsolve([x**2+4*y**2-5, x+2*y-1], x, y)</p>
+<p><img src="media/7e3a25639cd09e0e676a25235e00424b.png" alt="">[]:</p>
+<h4 id="937-&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;"><a name="937-&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#937-&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="937-&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;" class="plugin-anchor" href="#937-&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.7 &#x89E3;&#x4E0D;&#x7B49;&#x5F0F;</h4>
+<h5 id="&#x89E3;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;"><a name="&#x89E3;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x89E3;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;" class="plugin-anchor" href="#&#x89E3;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;</h5>
+<p>&#x9488;&#x5BF9;&#x6709;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;&#xFF0C;SymPy&#x5728;sympy.solvers.inequalities&#x6A21;&#x5757;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;solve_poly_inequality()&#x51FD;&#x6570;&#x6765;&#x6C42;&#x89E3;&#x6B64;&#x7C7B;&#x4E0D;&#x7B49;&#x5F0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x8BED;&#x53E5;&#x5BFC;&#x5165;solve_poly_inequality()&#x51FD;&#x6570;&#xFF1A;</p>
+<p>from sympy.solvers.inequalities import solve_rational_inequality</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;&#x7EC4;</p>
+<p>[]:solve_rational_inequalities([[</p>
+<p>... ((Poly(-x + 1), Poly(1, x)), &apos;&gt;=&apos;),</p>
+<p>... ((Poly(-x + 1), Poly(1, x)), &apos;\&lt;=&apos;)]])</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;&#x7EC4;</p>
+<p>[]:solve_rational_inequalities([[</p>
+<p>... ((Poly(x), Poly(1, x)), &apos;!=&apos;),</p>
+<p>... ((Poly(-x + 1), Poly(1, x)), &apos;&gt;=&apos;)]])</p>
+<h5 id="&#x89E3;&#x5E26;&#x6709;&#x7406;&#x6570;&#x7CFB;&#x6570;&#x7684;&#x591A;&#x9879;&#x4E0D;&#x7B49;&#x5F0F;"><a name="&#x89E3;&#x5E26;&#x6709;&#x7406;&#x6570;&#x7CFB;&#x6570;&#x7684;&#x591A;&#x9879;&#x4E0D;&#x7B49;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x5E26;&#x6709;&#x7406;&#x6570;&#x7CFB;&#x6570;&#x7684;&#x591A;&#x9879;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x89E3;&#x5E26;&#x6709;&#x7406;&#x6570;&#x7CFB;&#x6570;&#x7684;&#x591A;&#x9879;&#x4E0D;&#x7B49;&#x5F0F;" class="plugin-anchor" href="#&#x89E3;&#x5E26;&#x6709;&#x7406;&#x6570;&#x7CFB;&#x6570;&#x7684;&#x591A;&#x9879;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x5E26;&#x6709;&#x7406;&#x6570;&#x7CFB;&#x6570;&#x7684;&#x591A;&#x9879;&#x4E0D;&#x7B49;&#x5F0F;</h5>
+<p>&#x5728;&#x5BF9;&#x4F7F;&#x7528;SymPy&#x89E3;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x591A;&#x9879;&#x4E0D;&#x7B49;&#x5F0F;&#x8FDB;&#x884C;&#x8BB2;&#x89E3;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x9700;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x51FD;&#x6570;&#x2014;&#x2014;Ploy&#x3002;</p>
+<p>Ploy()&#x7528;&#x4E8E;&#x8868;&#x793A;&#x591A;&#x9879;&#x5F0F;&#x8868;&#x8FBE;&#x5F0F;&#x5E76;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#x6CDB;&#x578B;&#x7C7B;&#xFF0C;&#x662F;Expr&#x7C7B;&#x7684;&#x5B50;&#x7C7B;&#x3002;</p>
+<p>Ploy()&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>Poly<strong>(</strong>rep<strong>,</strong> <strong>*</strong>gens<strong>,</strong> <strong>**</strong>args<strong>)</strong></p>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x8BED;&#x53E5;&#x5BFC;&#x5165;Poly&#x51FD;&#x6570;&#xFF1A;</p>
+<p>&#x9488;&#x5BF9;&#x6709;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x4E0D;&#x7B49;&#x5F0F;&#xFF0C;SymPy&#x5728;sympy.solvers.inequalities&#x6A21;&#x5757;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;solve_poly_inequality()&#x51FD;&#x6570;&#x6765;&#x6C42;&#x89E3;&#x6B64;&#x7C7B;&#x4E0D;&#x7B49;&#x5F0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x8BED;&#x53E5;&#x5BFC;&#x5165;solve_poly_inequality()&#x51FD;&#x6570;&#xFF1A;</p>
+<p>from sympy.solvers.inequalities import solve_poly_inequality</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;&#x7EC4;</p>
+<p>[]:&gt;&gt;&gt; solve_poly_inequality(Poly(x**2 - 1, x, domain=&apos;ZZ&apos;), &apos;!=&apos;)</p>
+<p><img src="media/d38ad1634f9caf5497070bac686c648a.png" alt="">[]:</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x65B9;&#x7A0B;</p>
+<p>[]:solve_rational_inequalities([[</p>
+<p>... ((Poly(-x + 1), Poly(1, x)), &apos;!=&apos;),</p>
+<p>... ((Poly(-x + 1), Poly(1, x)), &apos;\&lt;=&apos;)]])</p>
+<p>[]:<img src="media/311cc66a57a62c6e28172a41f5d2423a.png" alt=""></p>
+<h5 id="&#x89E3;&#x5B9E;&#x6570;&#x5355;&#x53D8;&#x91CF;&#x4E0D;&#x7B49;&#x5F0F;"><a name="&#x89E3;&#x5B9E;&#x6570;&#x5355;&#x53D8;&#x91CF;&#x4E0D;&#x7B49;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x5B9E;&#x6570;&#x5355;&#x53D8;&#x91CF;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x89E3;&#x5B9E;&#x6570;&#x5355;&#x53D8;&#x91CF;&#x4E0D;&#x7B49;&#x5F0F;" class="plugin-anchor" href="#&#x89E3;&#x5B9E;&#x6570;&#x5355;&#x53D8;&#x91CF;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x5B9E;&#x6570;&#x5355;&#x53D8;&#x91CF;&#x4E0D;&#x7B49;&#x5F0F;</h5>
+<p>&#x9488;&#x5BF9;&#x5B9E;&#x6570;&#x5355;&#x53D8;&#x91CF;&#x4E0D;&#x7B49;&#x5F0F;&#xFF0C;SymPy&#x5728;sympy.solvers.inequalities&#x6A21;&#x5757;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;solve_
+univariate _inequality()&#x51FD;&#x6570;&#x6765;&#x6C42;&#x89E3;&#x6B64;&#x7C7B;&#x4E0D;&#x7B49;&#x5F0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x8BED;&#x53E5;&#x5BFC;&#x5165;solve_ univariate _inequality()&#x51FD;&#x6570;&#xFF1A;</p>
+<p>from sympy.solvers.inequalities import solve_ univariate _inequality</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;</p>
+<p>[]:solve_univariate_inequality(x**2 &gt;= 4, x, relational=False)</p>
+<p>Union(Interval(-oo, -2), Interval(2, oo))</p>
+<p><img src="media/60b20d62806d36a6f306b0881938396c.png" alt="">[]:</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;</p>
+<p>[]:solve_univariate_inequality(x**3+2*x**2 -3*x&gt;= 4, x,
+relational=False)</p>
+<p><img src="media/d4be1383e32bd325353380d3d64bf6ff.png" alt="">[]:</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x4E0D;&#x7B49;&#x5F0F;</p>
+<p>[]:domain = Interval(0, S.Infinity)</p>
+<p>solve_univariate_inequality(x**3+2*x**2 -3*x&gt;= 4, x, False, domain)</p>
+<p><img src="media/cb53c03cfae57e745d8d418e2a6a2cbb.png" alt="">[]:</p>
+<p>&#x4F8B;&#xFF1A;&#x89E3;&#x4E09;&#x89D2;&#x4E0D;&#x7B49;&#x5F0F;</p>
+<p>[]:solve_univariate_inequality(sin(x)**2&gt; 0, x, relational=False)</p>
+<p><img src="media/c18b39ee0174bb6b63a4c56bffce5b74.png" alt="">[]:</p>
+<h5 id="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x6570;&#x591A;&#x9879;&#x5F0F;"><a name="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x6570;&#x591A;&#x9879;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5316;&#x7B80;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x6570;&#x591A;&#x9879;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x6570;&#x591A;&#x9879;&#x5F0F;" class="plugin-anchor" href="#&#x5316;&#x7B80;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x6570;&#x591A;&#x9879;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5316;&#x7B80;&#x5E26;&#x6709;&#x6709;&#x7406;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x7406;&#x6570;&#x591A;&#x9879;&#x5F0F;</h5>
+<p>[]:from sympy import Poly, Symbol</p>
+<p>from sympy.solvers.inequalities import reduce_rational_inequalities</p>
+<p>x = Symbol(&apos;x&apos;, real=True)</p>
+<p>&#x4F8B;&#xFF1A;&#x5316;&#x7B80;</p>
+<p>[]:reduce_rational_inequalities([[x**2 \&lt;= 0]], x)</p>
+<p>&#x4F8B;&#xFF1A;&#x5316;&#x7B80;</p>
+<p>[]:reduce_rational_inequalities([[x + 2 &gt; 0]], x)</p>
+<p>[]:<img src="media/ae138aa4226e3db35f5932d7640832aa.png" alt=""></p>
+<p>[]:reduce_rational_inequalities([[(x + 2, &quot;&gt;&quot;)]], x)</p>
+<p>[]:<img src="media/5f41eb20d49398cc2233161f536c7c4d.png" alt=""></p>
+<p>[]:reduce_rational_inequalities([[x + 2]], x)</p>
+<p>[]:<img src="media/b967aaa96e79c4bdda7a3d542e790ba8.png" alt=""></p>
+<h5 id="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;"><a name="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;" class="plugin-anchor" href="#&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;</h5>
+<p>[]:from sympy import Abs, Symbol</p>
+<p>from sympy.solvers.inequalities import reduce_abs_inequality</p>
+<p>x = Symbol(&apos;x&apos;, real=True)</p>
+<p>[]:reduce_abs_inequality(Abs(x - 5) - 3, &apos;\&lt;&apos;, x)</p>
+<p>[]:<img src="media/1054165365a5201c79213c9b272c4e49.png" alt=""></p>
+<p>[]:reduce_abs_inequality(Abs(x + 2)*3 - 13, &apos;\&lt;&apos;, x)</p>
+<p>[]:<img src="media/c6ebdec6c964350e93bc6d36f53b35bf.png" alt=""></p>
+<h5 id="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;&#x7CFB;&#x7EDF;"><a name="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5316;&#x7B80;&#x5E26;&#x6709;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x4E0D;&#x7B49;&#x5F0F;&#x7CFB;&#x7EDF;</h5>
+<p>[]:from sympy import Abs, Symbol</p>
+<p>from sympy.solvers.inequalities import reduce_abs_inequality</p>
+<p>x = Symbol(&apos;x&apos;, real=True)</p>
+<p>&#x4F8B;&#xFF1A;&#x5316;&#x7B80;</p>
+<p>[]:reduce_abs_inequalities([(Abs(3*x - 5) - 7, &apos;\&lt;&apos;),</p>
+<p>... (Abs(x + 25) - 13, &apos;&gt;&apos;)], x)</p>
+<p>[]:<img src="media/d1fe7be0b8cf048a742b63961be7c517.png" alt=""></p>
+<p>&#x4F8B;&#xFF1A;&#x5316;&#x7B80;</p>
+<p>[]:reduce_abs_inequalities([(Abs(x - 4) + Abs(3*x - 5) - 7, &apos;\&lt;&apos;)], x)</p>
+<p>[]:<img src="media/50daab97ade4feea868d8db65119b381.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.3-Plot.html" class="navigation navigation-prev " aria-label="Previous page: 3.3 绘图">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Chapter4/4.0-Calculus.html" class="navigation navigation-next " aria-label="Next page: 第四章：微积分">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.4 基础数学","level":"1.4.4","depth":2,"next":{"title":"第四章：微积分","level":"1.5","depth":1,"path":"Chapter4/4.0-Calculus.md","ref":"Chapter4/4.0-Calculus.md","articles":[{"title":"4.1 极限与连续","level":"1.5.1","depth":2,"path":"Chapter4/4.1-Limitation_and_Continuation.md","ref":"Chapter4/4.1-Limitation_and_Continuation.md","articles":[]},{"title":"4.2 微分","level":"1.5.2","depth":2,"path":"Chapter4/4.2-Differential.md","ref":"Chapter4/4.2-Differential.md","articles":[]},{"title":"4.3 积分","level":"1.5.3","depth":2,"path":"Chapter4/4.3-Integral.md","ref":"Chapter4/4.3-Integral.md","articles":[]},{"title":"4.4 常微分方程","level":"1.5.4","depth":2,"path":"Chapter4/4.4-Ordinary_Differential_Equations.md","ref":"Chapter4/4.4-Ordinary_Differential_Equations.md","articles":[]},{"title":"4.5 级数","level":"1.5.5","depth":2,"path":"Chapter4/4.5-Series.md","ref":"Chapter4/4.5-Series.md","articles":[]},{"title":"4.6 空间解析几何","level":"1.5.6","depth":2,"path":"Chapter4/4.6-Space_Analytic_Geometry.md","ref":"Chapter4/4.6-Space_Analytic_Geometry.md","articles":[]},{"title":"4.7 偏导数","level":"1.5.7","depth":2,"path":"Chapter4/4.7-Partial_Derivative.md","ref":"Chapter4/4.7-Partial_Derivative.md","articles":[]},{"title":"4.8 重积分","level":"1.5.8","depth":2,"path":"Chapter4/4.8-Multiple_Integral.md","ref":"Chapter4/4.8-Multiple_Integral.md","articles":[]}]},"previous":{"title":"3.3 绘图","level":"1.4.3","depth":2,"path":"Chapter3/3.3-Plot.md","ref":"Chapter3/3.3-Plot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/JohannesLiu"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"donate","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"JohannesLiu","repo":"Knowledge-Extraction-Concept-and-Technology","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Johannes Liu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn Advanced Mathematics with Python","language":"zh-hans","links":{"sidebar":{"Home Page":"https://flyinghuster.com"}},"gitbook":"3.2.3","description":"A Cookbook for SymPy"},"file":{"path":"Chapter3/3.4-Basic_Mathematics.md","mtime":"2021-08-08T07:28:27.224Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-08T09:53:24.135Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
