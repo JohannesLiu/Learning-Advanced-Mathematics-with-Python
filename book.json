@@ -22,7 +22,6 @@
         "anchors",
         "github",
         "github-buttons",
-        "donate",
         "sharing-plus",
         "anchor-navigation-ex",
         "favicon"
@@ -40,12 +39,6 @@
                 "count": true
                 }
             ]
-        },
-        "donate": {
-            "alipay": "./source/images/donate.png",
-            "title": "",
-            "button": "donate",
-            "alipayText": " "
         },
         "sharing": {
             "douban": false,
