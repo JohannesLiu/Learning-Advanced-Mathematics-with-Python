@@ -24,7 +24,8 @@
         "github-buttons",
         "sharing-plus",
         "anchor-navigation-ex",
-        "favicon"
+        "favicon",
+        "katex"
     ],
     "pluginsConfig": {
         "github": {

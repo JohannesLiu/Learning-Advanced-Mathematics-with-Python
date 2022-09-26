@@ -1,5 +1,5 @@
 # Learning_Advanced_Mathematics_with_Python
-
+## 作者：刘晓凯
 
 本书组织结构如下
 
