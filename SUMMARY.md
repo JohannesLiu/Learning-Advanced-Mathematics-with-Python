@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [前言](README.md)
 * [第一章：初步](Chapter1/1.0-Prelimary.md)
     * [1.1 数据结构概述](Chapter1/1.1-Data_Science_Introduction.md)
     * [1.2 安装Python](Chapter1/1.2-Install_Python_Interpreter.md)
