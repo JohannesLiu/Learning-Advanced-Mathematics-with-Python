@@ -2,7 +2,6 @@
 
 作者：刘晓凯(Johanens Liu)
 
-## 寻求帮助
 
 ## 前言
 
@@ -20,6 +19,10 @@
 
 Johannes Liu
 Huazhong University of Science and Technology
+
+## 寻求帮助
+
+欢迎愿意参加此书籍编篡工作的本科生，研究生与我联系！本书的正式版本将按照贡献进行署名及致谢。
 
 ## 本书组织结构
 
