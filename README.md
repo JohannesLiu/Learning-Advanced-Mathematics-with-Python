@@ -4,11 +4,13 @@
  * @email: iexkliu@gmail.com
  * @github: https://github.com/johannesliu
  * @Date: 2021-08-08 01:48:57
- * @LastEditTime: 2022-11-10 01:30:24
+ * @LastEditTime: 2022-11-10 01:31:25
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: \Learning_Advanced_Mathematics_with_Python\README.md
 -->
+
+## 作者自述
 
 本书的编写灵感源于我于本科期间学习数学分析、高等代数、概率论与统计学的经历。我在本科期间自学了大量计算机知识，其中就包括主流的三种数学编程语言——Mathematica，Matlab以及Maple。在我读书的闲暇时间，我喜欢使用这些编程语言来对一些所学科目中的问题进行求解，以获得对这些软件以及编程语言更深入的理解。尽管数学是一门以理论证明为基础的学科，解决数学问题本身也是充满挑战以及趣味的过程，但是，我却在日常使用数学软件进行编程的过程中体验到了不一样的快乐。坦率来讲，相对于和纸笔过日子，我更喜欢和电脑一起玩。可以说编写本书是由于兴趣驱动的。
 
