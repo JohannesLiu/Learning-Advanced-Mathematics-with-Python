@@ -4,7 +4,7 @@
  * @email: iexkliu@gmail.com
  * @github: https://github.com/johannesliu
  * @Date: 2021-08-08 01:48:57
- * @LastEditTime: 2022-11-10 01:22:09
+ * @LastEditTime: 2022-11-10 01:30:24
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: \Learning_Advanced_Mathematics_with_Python\README.md
@@ -25,10 +25,6 @@
 刘晓凯
 
 华中科技大学
-
-## 寻求帮助
-
-欢迎愿意参加此书籍编篡工作的本科生，研究生与我联系！本书的正式版本将按照贡献进行署名及致谢。
 
 ## 本书组织结构
 
