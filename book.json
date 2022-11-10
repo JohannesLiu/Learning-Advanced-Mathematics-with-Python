@@ -12,7 +12,7 @@
     },
     "links": {
         "sidebar": {
-            "Home Page": "https://flyinghuster.com"
+            "Home Page": "https://github..com"
         }
     },
     "plugins": [
@@ -34,7 +34,7 @@
         "github-buttons": {
             "buttons": [{
                 "user": "JohannesLiu",
-                "repo": "Knowledge-Extraction-Concept-and-Technology",
+                "repo": "Learning-Advanced-Mathematics-with-Python",
                 "type": "star",
                 "size": "small",
                 "count": true
