@@ -1,4 +1,16 @@
-# 使用Python学习高等数学
+<!--
+ * @Author: Johannes Liu
+ * @LastEditors: Johannes Liu
+ * @email: iexkliu@gmail.com
+ * @github: https://github.com/johannesliu
+ * @Date: 2021-08-08 01:48:57
+ * @LastEditTime: 2022-11-10 01:20:30
+ * @motto: Still water run deep
+ * @Description: Modify here please
+ * @FilePath: \Learning_Advanced_Mathematics_with_Python\README.md
+-->
+
+# 使用Python学习高等数学 (Learning Advanced Mathematics with Python)
 
 作者：刘晓凯(Johanens Liu)
 
