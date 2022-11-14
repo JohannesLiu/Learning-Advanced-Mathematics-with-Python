@@ -1,8 +1,19 @@
+<!--
+ * @Author: Johannes Liu
+ * @LastEditors: Johannes Liu
+ * @email: iexkliu@gmail.com
+ * @github: https://github.com/johannesliu
+ * @Date: 2021-08-08 01:49:58
+ * @LastEditTime: 2022-11-13 17:47:52
+ * @motto: Still water run deep
+ * @Description: Modify here please
+ * @FilePath: \Learning_Advanced_Mathematics_with_Python\SUMMARY.md
+-->
 # Summary
 
 * [前言](README.md)
 * [第一章：初步](Chapter1/1.0-Prelimary.md)
-    * [1.1 数据结构概述](Chapter1/1.1-Data_Science_Introduction.md)
+    * [1.1 数据科学](Chapter1/1.1-Data_Science_Introduction.md)
     * [1.2 安装Python](Chapter1/1.2-Install_Python_Interpreter.md)
     * [1.3 Python类库](Chapter1/1.3-Package_of_Python.md)
     * [1.4 Anaconda](Chapter1/1.4-Anaconda.md)

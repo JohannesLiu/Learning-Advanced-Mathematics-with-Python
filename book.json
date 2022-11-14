@@ -25,7 +25,11 @@
         "sharing-plus",
         "anchor-navigation-ex",
         "favicon",
-        "katex"
+        "katex",
+        "expandable-chapters",
+        "copy-code-button",
+        "search-plus",
+        "page-copyright"
     ],
     "pluginsConfig": {
         "github": {
@@ -75,6 +79,18 @@
                 "120x120": "./source/images/apple-touch-icon.jpg",
                 "180x180": "./source/images/apple-touch-icon.jpg"
             }
-        }
+        },
+        "page-copyright": {
+            "description": "modified at",
+            "signature": "",
+            "wisdom": "Designer info",
+            "format": "YYYY-MM-dd hh:mm:ss",
+            "copyright": "Copyright &#169; JohannesLiu",
+            "timeColor": "#666",
+            "copyrightColor": "#666",
+            "utcOffset": "8",
+            "style": "normal",
+            "noPowered": true
+          }
     }
 }
